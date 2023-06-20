@@ -1,6 +1,8 @@
-ukaz jak nastavit clippy v Golandu
-
-
+# Rust example application
+This application serves as introduction into Rust programming language. It shows good and bad approaches. 
+Aplication is stores data into Postgres + converts data to numpy format and stores them into files. 
+Application can be handled via gRPC api. 
+Application also support monitoring of random data into Prometheus and Jaeger.
 
 ### Prerequisites
 
@@ -16,6 +18,9 @@ ukaz jak nastavit clippy v Golandu
 - run Prometheus app `./prometheus`
 - `localhost:9090`
 - search e.g. for `response_time_bucket`
+
+### Run app
+ - `cargo run --release`
 
 ### Cargo interesting tools
 - cargo clippy - check for common mistakes and opportunities for improvement
