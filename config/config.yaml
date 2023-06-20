@@ -1,0 +1,13 @@
+rust-example-app:
+
+  grpc_server:
+    host: "0.0.0.0"
+    port: 50059
+
+  postgres_db:
+    host: "127.0.0.1"
+    port: 5431
+    db_name: "postgres"
+    user: "postgres"
+    password: ""
+    max_connections: 5
