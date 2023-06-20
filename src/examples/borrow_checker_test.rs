@@ -49,4 +49,12 @@ pub mod test {
   fn borrow_method(x: &StructA) {
     println!("{:?}", x)
   }
+
+  fn variable_shadowing_test() {
+    let x = 42.0;
+    println!("{x}");
+
+    let x = true;
+    println!("{x}");
+  }
 }

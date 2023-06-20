@@ -9,4 +9,3 @@ pub type MlDatasetDao = Arc<dyn MlDatasetDaoLike  + Send + Sync>;
 pub trait MlDatasetDaoLike {
   async fn store_ml_data_set(&self, dataset: MlDataset) -> Result<()>;
 }
-

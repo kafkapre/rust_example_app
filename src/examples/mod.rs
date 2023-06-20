@@ -8,3 +8,7 @@ mod borrow_checker_test;
 mod string_test;
 mod serde_test;
 mod macros_test;
+mod generic_test;
+mod enums_memory_footprint_test;
+mod lifetime_test;
+mod send_sync_test;
