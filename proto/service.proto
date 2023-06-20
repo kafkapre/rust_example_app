@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package grpc_api;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+
+service RustExampleApi {
+  rpc StoreMatchesResults (StoreMatchesResultsRequest) returns (StoreMatchesResultsResponse);
+  rpc SetProcessorThreshold (SetProcessorThresholdRequest) returns (SetProcessorThresholdResponse);
+}
+
+message StoreMatchesResultsRequest {
+  repeated Match matches = 1;
+}
+
+message StoreMatchesResultsResponse {
+}
+
+message SetProcessorThresholdRequest {
+  string threshold = 1; // timestamp
+}
+
+message SetProcessorThresholdResponse {
+}
+
+message Match{
+  oneof match_type {
+    CsgoMatch csgo = 1;
+    Dota2Match dota2 = 2;
+    LolMatch lol = 3;
+  }
+}
+
+message CsgoMatch{
+  string started_at = 1; // timestamp
+  uint64 home = 2;
+  uint64 away = 3;
+  uint32 rounds = 4;
+  optional bool home_won = 5;
+}
+
+message Dota2Match{
+  string started_at = 1; // timestamp
+  float gold = 2;
+}
+
+message LolMatch{
+  string started_at = 1; // timestamp
+  uint32 red = 2;
+  uint32 blue = 3;
+}

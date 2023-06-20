@@ -1,0 +1,25 @@
+
+###
+
+GRPC localhost:50059/grpc_api.RustExampleApi/StoreMatchesResults
+
+{
+  "matches": [
+    {
+      "lol": {
+        "started_at": "2017-12-17 18:01:00.000",
+        "red": 1,
+        "blue": 4
+      }
+    },
+    {
+      "csgo": {
+        "started_at": "2017-12-17 18:01:00.000",
+        "home": 42,
+        "away": 24,
+        "rounds": 5,
+        "home_won": true
+      }
+    }
+  ]
+}
